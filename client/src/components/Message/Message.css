@@ -1,0 +1,103 @@
+p {
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.messageBox {
+    background: #F3F3F3;
+    border-radius: 10px;
+    padding: 0px 10px;
+    color: white;
+    display: inline-block;
+    max-width: 80%;
+  }
+  
+  .messageText {
+    width: 100%;
+    letter-spacing: 0;
+    float: left;
+    padding:5px;
+    font-size: 1em;
+    font-weight: 500;
+    word-wrap: break-word;
+  }
+  .botText {
+    font-size: 8px;
+    border-radius: 10px;
+    padding:5px;
+    margin-left: 5px;
+    color: white;
+    background-color: rgb(168, 2, 2);
+  }
+
+  .time{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 8px;
+    font-weight: bold;
+    margin-left:10px;
+    margin-right: 10px;
+  }
+
+
+  .messageText img {
+    vertical-align: middle;
+  }
+  
+  .messageContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5%;
+    margin-top: 3px;
+  }
+
+  
+  .sentText, .sentText2 {
+    display: flex;
+    margin-top:10px;
+    align-items: center;
+    font-family: Helvetica;
+    color: #828282;
+    letter-spacing: 0.3px;
+  }
+  .sentText2 {
+    justify-content: flex-end;
+  }
+  
+  .pl-10 {
+    padding-left: 5%;
+  }
+  .pl-10-2 {
+    padding-right: 5%;
+  }
+  .pr-10 {
+    padding-right: 10px;
+  }
+  
+  .justifyStart {
+    justify-content: flex-start;
+  }
+  
+  .justifyEnd {
+    justify-content: flex-end;
+  }
+  
+  .colorWhite {
+    color: white;
+  }
+  
+  .colorDark {
+    color: #353535;
+  }
+  
+  
+  .backgroundBlue {
+    background: rgb(32, 128, 184);
+  }
+  
+  .backgroundLight {
+    background: #F3F3F3;
+  }
+  .backgroundBot {
+    background-color: rgb(253, 225, 148);
+  }

@@ -1,3 +1,4 @@
+
 const formatMessage = (username, text, date) => {
     return {
         name: username,
@@ -5,5 +6,7 @@ const formatMessage = (username, text, date) => {
         date: new Date()
     }
 }
+
+
 
 module.exports = formatMessage

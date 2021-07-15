@@ -40,8 +40,6 @@ const Message = ({ message, name, currentUser, date }) => {
                         </div>
                         </div>
                   )
-              
-            
           )
     )
 }

@@ -21,9 +21,17 @@ class Chat extends React.Component {
         this.state = initialState
     }
 
+    fetchData = () => {
+        fetch('http://localhost:4001/chat')
+        .then(response => response.json())
+        .then(data => this.setState({messages: data}))
+      }
+
     componentDidMount() {
-        socket = io.connect('http://localhost:4000')
+        this.fetchData()
+        socket = io.connect('http://localhost:4001')
         
+        //message from bot
         socket.on('message', data => {
             console.log(data)
             this.setState(prevState => ({messages: [...prevState.messages, data]}))
@@ -33,15 +41,17 @@ class Chat extends React.Component {
         this.setState({tempName: this.props.tempName}, () => {
             socket.emit('join', { name: this.state.tempName })
         })
-        
+    
             
-
+        //"client receiving chat message from other clients" receiving from server
         socket.on('chat', data => {
             console.log(this.state.messages, 'from chat socket')
             this.setState({ typing: '' })
+            //USE THIS FOR STORING ON CLIENT SIDE
             this.setState(prevState => ({
                 messages: [...prevState.messages, data]})
-                )
+                ) 
+            //this.fetchData()  USE THIS FOR STORING ON SERVER SIDE
         })
         
         
